@@ -3,10 +3,11 @@ p {
 }
 
 .highlight {
-    background-color: #a7bbe2;
+    background-color: #d6e3ff;
 }
 #special {
     font-weight: bold;
+    color: red;
 }
 img {
   max-width: 100%;
