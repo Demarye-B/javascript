@@ -34,4 +34,3 @@ function quiz() {
 }
 
 var finalScore = quiz();
-document.write('<p>Your final score is ' + finalScore + '</p>');
