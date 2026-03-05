@@ -87,7 +87,22 @@ function getEmailInfo() {
 
 getEmailInfo();
 
+function displayQuote() {
+    let quotes = [
+            "Be yourself; everyone else is already taken.",
+            "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.",
+            "Be the change that you wish to see in the world.",
+            "I have not failed. I've just found 10,000 ways that won't work.",
+            "We accept the love we think we deserve."
+        ];
 
+        let randomIndex = Math.floor(Math.random() * 4);
+        let chosenQuote = quotes[randomIndex];
+
+        document.getElementById("quote").innerHTML = `"${chosenQuote}"`;
+}
+
+displayQuote();
 
 var questions = [
     'What do you call the intense fear of spiders?',
@@ -107,6 +122,8 @@ function quiz() {
         var guess = 3;
         while (guess > 0) {
            var  ans = prompt(questions[i]);
+           ans = ans.toLowerCase();
+
             if (ans == answers[i]){
                 if (guess == 3){
                     score = score + 3;
@@ -125,4 +142,9 @@ function quiz() {
 }
 
 var finalScore = quiz();
-document.getElementById("score").innerHTML = "Your final score is: " + finalScore;
+var percentage = (finalScore / 9) * 100;
+percentage = percentage.toFixed(2);
+
+document.getElementById("score").innerHTML = 
+    "Your final score is: " + finalScore + "<br>" +
+    "Your percentage is: " + percentage + "%";
