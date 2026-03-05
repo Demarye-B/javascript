@@ -31,6 +31,36 @@ function displayDate() {
 
 displayDate();
 
+function displayGreeting() {
+    let now = new Date();
+    let hour = now.getHours();
+
+    let greeting;
+
+    switch (true) {
+        case (hour < 12):
+            greeting = "Good morning";
+            break;
+        case (hour < 18):
+            greeting = "Good afternoon";
+            break;
+        default:
+            greeting = "Good evening";
+    }
+
+    let name = prompt("Please enter your name:");
+
+    function capitalize(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    }
+
+    name = capitalize(name);
+
+    document.getElementById("greeting").innerHTML = `${greeting}, ${name}!`;
+}
+
+displayGreeting();
+
 
 var questions = [
     'What do you call the intense fear of spiders?',
