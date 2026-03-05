@@ -98,3 +98,4 @@ function quiz() {
 }
 
 var finalScore = quiz();
+document.getElementById("score").innerHTML = "Your final score is: " + finalScore;
