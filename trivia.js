@@ -61,6 +61,33 @@ function displayGreeting() {
 
 displayGreeting();
 
+function getEmailInfo() {
+    let email;
+    let valid = false;
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    while (!valid) {
+        email = prompt("Please enter your email address:");
+
+        if (emailPattern.test(email)) {
+            valid = true;
+        } else {
+            alert("Invalid email. Please try again.");
+        }
+    }
+
+    let parts = email.split("@");
+    let username = parts[0].toUpperCase();
+    let domain = parts[1];
+
+    document.getElementById("emailInfo").innerHTML =
+        `Username: ${username}<br>Domain: ${domain}`;
+}
+
+getEmailInfo();
+
+
 
 var questions = [
     'What do you call the intense fear of spiders?',
