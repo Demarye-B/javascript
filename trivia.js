@@ -1,3 +1,37 @@
+function displayDate() {
+    let now = new Date();
+
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    let weekdayName = days[now.getDay()];
+    let monthName = months[now.getMonth()];
+    let dayNumber = now.getDate();
+    let year = now.getFullYear();
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let ampm = "am";
+
+    if (hours >= 12) {
+        ampm = "pm";
+        if (hours > 12) {
+            hours -= 12;
+        }
+    }
+
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+
+    let finalSentence = `Today is ${weekdayName}, ${monthName} ${dayNumber}, ${year}. It is ${hours}:${minutes} ${ampm}.`;
+
+    document.getElementById("date").innerHTML = finalSentence;
+}
+
+displayDate();
+
+
 var questions = [
     'What do you call the intense fear of spiders?',
     'Is a tomato a fruit or a vegetable?', 
