@@ -5,11 +5,13 @@ body {
 }
 main {
   width: 50em;
+  width: 100%;
   margin: 1em auto;
   border: outset thick darkgreen;
   background-color: cornsilk;
   padding: 1em;
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 #specials {
   width: 10em;
@@ -105,13 +107,4 @@ input[type="submit"] {
 .Spring {
   background-color: #afeeee;
   text-align: center;
-}
-
-html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
