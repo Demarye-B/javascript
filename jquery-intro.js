@@ -80,7 +80,7 @@ $(document).ready(function() {
         break;  
 }
 
-  $('body').css("background-image", "url(" + backgroundImage + ")");
+  $('body').css("background-image", "url('" + backgroundImage + "')");
   
   $('#seasontips').html(tips[seasonIndex]);
 
