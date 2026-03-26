@@ -18,3 +18,74 @@ var specials = ["<p>Don't forget our feathered friends!</p><p>All bird feeders a
 "<p><strong>Jack-O-Lanterns</strong></p><p>Pumpkins: <br>large $8.99<br>small $5.99<br>Decorative pumpkins: <br>$7.99-11.99<br>Gourds: $6.99</p>",
 "<p>Trees and shrubs: 1/2 price - in stock only.</p>",
 "<p>Christmas trees!</p><p>We have sizes from 3' to 15' and lots of varieties. Find the perfect fit for your family while they last!</p>"];
+
+$(document).ready(function() {
+  console.log('Ready!'); // debug to verify jQuery working. load page and check the console log (F12)
+  // jQuery function calls go here...
+  let now = new Date();
+  let monthName = months[now.getMonth()];
+  let year = now.getFullYear();
+
+  if (monthName == 11 ) {
+    $('#slogan').after("<h3>Happy Holidays!</h3>");
+}
+
+  $('#month').text("Tips for " + monthName);
+  
+  $('#copy').append(" " + year);
+
+  $("#specials").html(specials[now.getMonth()]);
+
+  let seasonName;
+  let backgroundImage;
+  let seasonColor;
+  let seasonIndex;
+
+  
+  switch (monthName) {
+    case December:
+    case January:
+    case February:
+        seasonName = 'Winter';
+        backgroundImage = 'winterbg.jpg';
+        seasonColor = "#00f";
+        seasonIndex = 0;
+        break;
+
+    case March:
+    case April:
+    case May:
+        seasonName = "Spring";
+        backgroundImage = "springbg.jpg";
+        seasonColor = "#d7d";
+        seasonIndex = 1;
+        break;
+
+    case June:
+    case July:
+    case August:
+        seasonName = 'Summer';
+        backgroundImage = 'summerbg.jpg';
+        seasonColor = "#006400";
+        seasonIndex = 2;
+        break;
+
+    case September:
+    case October:
+    case November:
+        seasonName = 'Fall';
+        backgroundImage = 'fallbg.jpg';
+        seasonColor = "#930";
+        seasonIndex = 3;
+        break;  
+}
+
+  $('body').css("background-image", "url(" + backgroundImage + ")");
+  
+  $('#seasontips').html(tips[seasonIndex]);
+
+  $('strong, h1, h2, h3').css("color", seasonColor);
+
+  $('#specials').addClass(seasonName);
+
+});
