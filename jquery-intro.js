@@ -43,36 +43,36 @@ $(document).ready(function() {
 
   
   switch (monthName) {
-    case December:
-    case January:
-    case February:
+    case 11:
+    case 0:
+    case 1:
         seasonName = 'Winter';
         backgroundImage = 'winterbg.jpg';
         seasonColor = "#00f";
         seasonIndex = 0;
         break;
 
-    case March:
-    case April:
-    case May:
+    case 2:
+    case 3:
+    case 4:
         seasonName = "Spring";
         backgroundImage = "springbg.jpg";
         seasonColor = "#d7d";
         seasonIndex = 1;
         break;
 
-    case June:
-    case July:
-    case August:
+    case 5:
+    case 6:
+    case 7:
         seasonName = 'Summer';
         backgroundImage = 'summerbg.jpg';
         seasonColor = "#006400";
         seasonIndex = 2;
         break;
 
-    case September:
-    case October:
-    case November:
+    case 8:
+    case 9:
+    case 10:
         seasonName = 'Fall';
         backgroundImage = 'fallbg.jpg';
         seasonColor = "#930";
