@@ -26,7 +26,7 @@ $(document).ready(function() {
   let monthName = months[now.getMonth()];
   let year = now.getFullYear();
 
-  if (monthName == 11 ) {
+  if (now.getMonth() == 11 ) {
     $('#slogan').after("<h3>Happy Holidays!</h3>");
 }
 
