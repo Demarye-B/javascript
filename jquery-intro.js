@@ -22,7 +22,7 @@ var specials = ["<p>Don't forget our feathered friends!</p><p>All bird feeders a
 $(document).ready(function() {
   console.log('Ready!'); // debug to verify jQuery working. load page and check the console log (F12)
   // jQuery function calls go here...
-  let now = new Date(1997, 11, 25);
+  let now = new Date(1997, 5, 25);
   let monthName = months[now.getMonth()];
   let year = now.getFullYear();
 
