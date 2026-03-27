@@ -42,7 +42,7 @@ $(document).ready(function() {
   let seasonIndex;
 
   
-  switch (monthName) {
+  switch (now.getMonth()) {
     case 11:
     case 0:
     case 1:
