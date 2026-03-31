@@ -14,5 +14,19 @@ $(function(){
         $(this).children('.botanic').show();
     });
 
+    $('.pic').hover(
+        function (evt) {
+            let idToShow = '#' + $(this).attr('title');
+            let x = evt.pageX;
+            let y = evt.pageY;
+            $(idToShow).css('left', x);
+            $(idToShow).css('top', y);
+            $(idToShow).show();
+        },
+        function (evt) {
+            let idToHide = '#' + $(this).attr('title');
+            $(idToHide).hide();
+        }
+    );
 
 })
