@@ -1,5 +1,6 @@
 $(function(){
     $('.botanic').hide();
+    $('.imgdiv').hide();
 
     $('h1, h2').mouseover(function () {
         $(this).css('color', '#47a3ff');
@@ -17,7 +18,7 @@ $(function(){
     $('.pic').hover(
         function (evt) {
             let idToShow = '#' + $(this).attr('title');
-            let x = evt.pageX;
+            let x = evt.pageX + 150;
             let y = evt.pageY;
             $(idToShow).css('left', x);
             $(idToShow).css('top', y);
