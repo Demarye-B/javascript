@@ -9,4 +9,10 @@ $(function(){
         $(this).css('color', 'darkgreen');
     });
 
+    $('.flower').click(function () {
+        $('.botanic').hide();
+        $(this).children('.botanic').show();
+    });
+
+
 })
