@@ -30,4 +30,11 @@ $(function(){
         }
     );
 
+    $(document).keypress(function (evt) {
+        let letter = String.fromCharCode(evt.which);
+        letter = letter.toLowerCase();
+        let anchor = '#' + letter;
+        window.location = anchor;
+    });
+
 })
