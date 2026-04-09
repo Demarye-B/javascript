@@ -21,4 +21,11 @@ $(function(){
         });
     });
 
+    $('#slogan').mouseout(function(){
+        $(this).fadeOut("fast", 'swing', function(){
+            $(this).text("The Power of Flowers")
+            $(this).fadeIn("slow", "linear");
+        });
+    });
+
 })
