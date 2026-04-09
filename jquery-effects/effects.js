@@ -3,10 +3,8 @@ $(function(){
 
     $('#newsSignup').hide();
 
-    $('#openclose').click(function () {
-         $("a").on(function(event){
-            event.preventDefault();
-        });
+    $('#openclose').click(function (event) {
+        event.preventDefault();
         if ($('#newsSignup').is(":hidden")) {
             $('#newsSignup').show();
             $('#openclose').text("-")
