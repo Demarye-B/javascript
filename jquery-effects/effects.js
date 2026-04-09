@@ -4,7 +4,7 @@ $(function(){
     $('#newsSignup').hide();
 
     $('#openclose').click(function () {
-         $("a").on("submit", function(event){
+         $("a").on(function(event){
             event.preventDefault();
         });
         if ($('#newsSignup').is(":hidden")) {
