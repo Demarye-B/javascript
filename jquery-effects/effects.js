@@ -14,4 +14,11 @@ $(function(){
         }
     });
 
+    $('#slogan').mouseover(function(){
+        $(this).fadeOut(400, 'linear', function(){
+            $(this).text("Hand Picked Just for You")
+            $(this).fadeIn("slow", {easing: "swing"});
+        });
+    });
+
 })
