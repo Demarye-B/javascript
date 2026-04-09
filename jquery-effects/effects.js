@@ -14,14 +14,14 @@ $(function(){
         }
     });
 
-    $('#slogan').mouseenter(function(){
+    $('#slogan').mouseover(function(){
         $(this).fadeOut(400, 'linear', function(){
             $(this).text("Hand Picked Just for You")
-            $(this).fadeIn("slow", {easing: "swing"});
+            $(this).fadeIn("slow", "swing");
         });
     });
 
-    $('#slogan').mouseleave(function(){
+    $('#slogan').mouseout(function(){
         $(this).fadeOut("fast", 'swing', function(){
             $(this).text("The Power of Flowers")
             $(this).fadeIn("slow", "linear");
