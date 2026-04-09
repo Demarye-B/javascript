@@ -1,14 +1,14 @@
 $(function(){
     console.log("test");
 
-    $('#newsletter').hide();
+    $('#newsSignup').hide();
 
     $('#openclose').click(function () {
-        if ($('#newsletter').is(":hidden")) {
-            $('#newsletter').show();
+        if ($('#newsSignup').is(":hidden")) {
+            $('#newsSignup').show();
             $('#openclose').text("-")
         } else{
-            $('#newsletter').hide();
+            $('#newsSignup').hide();
             $('#openclose').text("+")
         }
     });
