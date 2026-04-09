@@ -28,4 +28,11 @@ $(function(){
         });
     });
 
+    $(document).ready(function() {
+        $('#rose').animate({right: '100px', opacity: '1'}, "slow", "swing");
+    });
+
+
+    
+
 })
