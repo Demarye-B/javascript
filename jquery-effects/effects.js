@@ -32,7 +32,10 @@ $(function(){
         $('#rose').animate({right: '100px', opacity: '1'}, "slow", "swing");
     });
 
-
-    
-
+    $('#newsSignup').submit(function(event) {
+        event.preventDefault();
+        alert("Thank you for registering")
+        $('#newsSignup').hide();
+        $('#signuplink').fadeTo("slow", 0.3)
+    });
 })
