@@ -1,6 +1,4 @@
 $(function(){
-    console.log("test");
-
     $('#newsSignup').hide();
 
     $('#openclose').click(function (event) {
