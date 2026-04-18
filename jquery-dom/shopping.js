@@ -15,12 +15,13 @@ $(function() {
         
     });
 
-    $('.del').on("click", "span", function() {
-            $(this).parent().hide();
+    $('.del').delegate("span", "click", function() {
+            $(this).parent().remove();
             shopcount--
             if (shopcount == 0){
                 $('#empty').show();
             }
+            var idValue = $(this).attr('id');
             $('#' + idValue).show();
         });
 
