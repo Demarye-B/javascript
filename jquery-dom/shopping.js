@@ -20,7 +20,7 @@ $(function() {
             if (shopcount == 0){
                 $('#empty').show();
             }
-            var idValue = $(this).parent().attr('id');
+            var idValue = $('.del').parent().attr('id');
             $('#' + idValue).show();
             $(this).parent().remove();
         });
