@@ -15,12 +15,12 @@ $(function() {
         
     });
 
-    $('.cartItem').delegate(".del", "click", function() {
+    $('#cart').delegate(".del", "click", function() {
             shopcount--
             if (shopcount == 0){
                 $('#empty').show();
             }
-            var idValue = $(this).attr('id');
+            var idValue = $('.cartItem').attr('id');
             $('#' + idValue).show();
             $(this).parent().remove();
         });
