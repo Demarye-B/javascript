@@ -12,7 +12,10 @@ $(function() {
         $('#cart').append(cartLink);
         $('#' + idValue).hide();
 
-        $('.del').on("click", "span", function() {
+        
+    });
+
+    $('.del').on("click", "span", function() {
             $(this).parent().hide();
             shopcount--
             if (shopcount == 0){
@@ -20,7 +23,6 @@ $(function() {
             }
             $('#' + idValue).show();
         });
-    });
 
 });
 
