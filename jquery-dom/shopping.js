@@ -20,8 +20,8 @@ $(function() {
             if (shopcount == 0){
                 $('#empty').show();
             }
-            var idValue = $('.del').parent().attr('id');
-            $('#' + idValue).show();
+            var nameValue = $(this).parent().attr('name');
+            $('#' + nameValue).show();
             $(this).parent().remove();
         });
 
