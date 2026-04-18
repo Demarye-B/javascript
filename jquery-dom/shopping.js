@@ -8,9 +8,9 @@ $(function() {
         if (shopcount > 0){
             $('#empty').hide();
         }
-        var cartLink = "<li class='cartItem' name='" + idvalue + "'>" + nameValue + " <span class='del'>Remove</span></li>";
+        var cartLink = "<li class='cartItem' name='" + idValue + "'>" + nameValue + " <span class='del'>Remove</span></li>";
         $('#cart').append(cartLink);
-        $('#' + itemID).hide();
+        $('#' + idValue).hide();
     });
 
 });
