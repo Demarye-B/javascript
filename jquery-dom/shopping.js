@@ -26,9 +26,9 @@ $(function() {
      });
      
      $('.rating').find('img').click(function() {
-        $(this).siblings().attr('src', 'jquery-dom\staroff.gif');
-        $(this).attr('src', 'jquery-dom\staron.gif')
-        $(this).prevAll().attr('src', 'jquery-dom\staron.gif')
+        $(this).siblings().attr('src', 'staroff.gif');
+        $(this).attr('src', 'staron.gif')
+        $(this).prevAll().attr('src', 'staron.gif')
      });
 
 });
