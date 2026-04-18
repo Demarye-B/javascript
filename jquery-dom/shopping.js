@@ -15,14 +15,14 @@ $(function() {
         
     });
 
-    $('.del').delegate("span", "click", function() {
-            $(this).parent().remove();
+    $('.cartItem').delegate(".del", "click", function() {
             shopcount--
             if (shopcount == 0){
                 $('#empty').show();
             }
             var idValue = $(this).attr('id');
             $('#' + idValue).show();
+            $(this).parent().remove();
         });
 
 });
