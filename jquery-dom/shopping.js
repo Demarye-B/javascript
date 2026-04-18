@@ -23,7 +23,13 @@ $(function() {
             var nameValue = $(this).parent().attr('name');
             $('#' + nameValue).show();
             $(this).parent().remove();
-        });
+     });
+     
+     $('.rating').find('img').click(function() {
+        $(this).siblings().attr('src', 'jquery-dom\staroff.gif');
+        $(this).attr('src', 'jquery-dom\staron.gif')
+        $(this).prevAll().attr('src', 'jquery-dom\staron.gif')
+     });
 
 });
 
