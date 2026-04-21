@@ -11,6 +11,10 @@ $(function() {
          var imgFile = $(this).attr('src');
          var imgText = $(this).attr('alt');
          $('#lgPic').attr('src', imgFile);
-         $('lgTitle').text(imgText)
+         $('#lgTitle').text(imgText)
     });
-});
+
+    $('#lgPic').click(function() {
+        $('a[rel="external"]').attr('target', '_blank');
+    })
+})
