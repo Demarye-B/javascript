@@ -15,6 +15,7 @@ $(function() {
     });
 
     $('#lgPic').click(function() {
-        $(this).attr('src', '_blank');
+        var imgFile = $(this).attr('src');
+        var newWin = open(imgFile, '_blank')
     });
 });
