@@ -15,6 +15,6 @@ $(function() {
     });
 
     $('#lgPic').click(function() {
-        console.log("Click event's working...")
+        $(this).attr('target', '_blank');
     });
 });
