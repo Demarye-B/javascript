@@ -10,7 +10,7 @@ $(function() {
     $('#thumbs').find('img').click(function() {
          var imgFile = $(this).attr('src');
          var imgText = $(this).attr('alt');
-         $('#lgPic').attr('src', 'imgFile');
-         $('lgTitle').text('imgText')
+         $('#lgPic').attr('src', imgFile);
+         $('lgTitle').text(imgText)
     });
 });
