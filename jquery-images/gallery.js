@@ -16,6 +16,6 @@ $(function() {
 
     $('#lgPic').click(function() {
         var imgFile = $(this).attr('src');
-        var newWin = open(imgFile, '_blank')
+        open(imgFile, '_blank')
     });
 });
