@@ -66,7 +66,7 @@ $(function() {
         } else if ($(this).val().length < 5 || $(this).val().length > 5) {
         $('#zipErr').text('Zip code must be 5 characters');;
         } else {
-        $('#nameErr').text('');
+        $('#zipErr').text('');
         }
     });
 
