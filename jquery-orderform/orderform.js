@@ -38,4 +38,51 @@ $(function() {
         $('#cityErr').text('');
         }
     });
+
+    $('#shipaddr').blur(function() {
+        if ($(this).val() == "") {
+        $('#shipaddrErr').text('Address is required');
+        } else {
+        
+        $('#shipaddrErr').text('');
+        }
+    });
+
+    $('#shipcity').blur(function() {
+        if ($(this).val() == "") {
+        $('#shipcityErr').text('City is required');
+        } else {
+        
+        $('#shipcityErr').text('');
+        }
+    });
+
+    $('#zip').blur(function() {
+        var zipValue = $(this).val();
+        if ($(this).val() == "") {
+        $('#zipErr').text('Zip code is required');
+        } else if (isNaN(zipValue)) {
+        $('#zipErr').text('Zip code must be numbers');
+        } else if ($(this).val().length < 5 || $(this).val().length > 5) {
+        $('#zipErr').text('Zip code must be 5 characters');;
+        } else {
+        $('#nameErr').text('');
+        }
+    });
+
+    $('#copy').click(function() {
+        if ($(this).prop('checked')) {
+            var address = $('#address').val();
+            var city = $('#city').val();
+            var zip = $('#zip').val();
+            var state = $('#state').val();
+
+            $('#shipaddr').val(address);
+            $('#shipcity').val(city);
+            $('#shipzip').val(zip);
+            $('#shipstate').val(state);
+        }
+    });
+
+
 });
