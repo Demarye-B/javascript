@@ -84,9 +84,10 @@ $(function() {
         }
     });
     
-    var orderTotal = 0
+   
 
     $('.qty').blur(function() {
+         var orderTotal = 0
         for (let i = 1; i <= 3; i++) {
         var price = $('#price' + i).text();
         price = parseInt(price);
@@ -95,12 +96,11 @@ $(function() {
             quantity = 0
         };
         var total = price * quantity;
-        total = total.toFixed(2);
         $('#total' + i).text("$" + total.toFixed(2));
         orderTotal = orderTotal + total
     }
 
-    $('#subt').val(orderTotal);
+    $('#subt').text(orderTotal);
 
     var state = $('#shipstate').val();
     if (state == "TX") {
