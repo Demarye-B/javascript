@@ -91,7 +91,7 @@ $(function() {
         for (let i = 1; i <= 3; i++) {
         var price = $('#price' + i).text();
         price = parseInt(price);
-        var quantity = $('#qty' + i).val();
+        var quantity = $('#' + i).val();
         if (isNaN(quantity) || quantity == "") {
             quantity = 0
         };
