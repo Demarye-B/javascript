@@ -86,7 +86,7 @@ $(function() {
     
     var orderTotal = 0
 
-    $('#qty').blur(function() {
+    $('.qty').blur(function() {
         for (let i = 1; i <= 3; i++) {
         var price = $('#price' + i).text();
         price = parseInt(price);
