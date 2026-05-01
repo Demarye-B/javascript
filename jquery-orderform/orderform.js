@@ -86,28 +86,32 @@ $(function() {
     
     var orderTotal = 0
 
-    for (let i = 1; i < 4; i++) {
-        var price = "#price" + i;
-        var quantity = $('#qty').val();
-        if (isNaN(quantity)) {
+    $('#qty').blur(function() {
+        for (let i = 1; i <= 3; i++) {
+        var price = $('#price' + i).text();
+        price = parseInt(price);
+        var quantity = $('#qty' + i).val();
+        if (isNaN(quantity) || quantity == "") {
             quantity = 0
         };
         var total = price * quantity;
         total = total.toFixed(2);
+        $('#total' + i).text("$" + total.toFixed(2));
         orderTotal = orderTotal + total
     }
 
     $('#subt').val(orderTotal);
 
-    if ($('#shipstate').val("TX")) {
+    var state = $('#shipstate').val();
+    if (state == "TX") {
         var tax = orderTotal * 0.08
         orderTotal = orderTotal + tax
     }
 
-    if ($('#shipstate').val("TX")) {
+    if (state == "TX") {
         var shipping = 5.00
         orderTotal = orderTotal + shipping
-    }else if ($('#shipstate').val("CA") || $('#shipstate').val("NY")) {
+    }else if (state == "CA" || state == "NY") {
         var shipping = 20.00
         orderTotal = orderTotal + shipping
     }else {
@@ -115,5 +119,8 @@ $(function() {
         orderTotal = orderTotal + shipping
     }
 
-    $('#gTotal').val(orderTotal);
+    $('#gTotal').text("$" + orderTotal.toFixed(2));
+    });
+
+    
 });
