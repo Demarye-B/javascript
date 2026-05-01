@@ -88,7 +88,7 @@ $(function() {
 
     for (let i = 1; i < 4; i++) {
         var price = "#price" + i;
-        var quantity = ('#qty').val();
+        var quantity = $('#qty').val();
         if (isNaN(quantity)) {
             quantity = 0
         };
