@@ -94,6 +94,7 @@ $(function() {
         var quantity = $('#' + i).val();
         if (isNaN(quantity) || quantity == "") {
             quantity = 0
+            $('.qty').text('');
         };
         var total = price * quantity;
         $('#total' + i).text("$" + total.toFixed(2));
@@ -118,6 +119,8 @@ $(function() {
         var shipping = 10.00
         orderTotal = orderTotal + shipping
     }
+    $('#tax').text("$" + tax)
+    $('#ship').text("$" + shipping)
 
     $('#gTotal').text("$" + orderTotal.toFixed(2));
     });
