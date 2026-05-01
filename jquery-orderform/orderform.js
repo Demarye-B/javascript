@@ -94,14 +94,13 @@ $(function() {
         var quantity = $('#' + i).val();
         if (isNaN(quantity) || quantity == "") {
             quantity = 0
-            $('.qty').text('');
         };
         var total = price * quantity;
         $('#total' + i).text("$" + total.toFixed(2));
         orderTotal = orderTotal + total
     }
 
-    $('#subt').text(orderTotal);
+    $('#subt').text("$" + orderTotal.toFixed(2));
 
     var state = $('#shipstate').val();
     if (state == "TX") {
@@ -120,7 +119,7 @@ $(function() {
         orderTotal = orderTotal + shipping
     }
     $('#tax').text("$" + tax)
-    $('#ship').text("$" + shipping)
+    $('#ship').text("$" + shipping.toFixed(2))
 
     $('#gTotal').text("$" + orderTotal.toFixed(2));
     });
