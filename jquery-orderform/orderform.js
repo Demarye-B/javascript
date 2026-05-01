@@ -21,6 +21,14 @@ $(function() {
         }
     });
 
+    $('#email2').blur(function() {
+        if ($('#email').val() !== $('#email2').val()) {
+            $('#email2Err').text('Emails do not match');
+        }else {
+            $('#email2Err').text('')
+        }
+    })
+
     $('#address').blur(function() {
         if ($(this).val() == "") {
         $('#addressErr').text('Address is required');
@@ -84,10 +92,8 @@ $(function() {
         }
     });
     
-   
-
-    $('.qty').blur(function() {
-         var orderTotal = 0
+   function calculateTotals() {
+       var orderTotal = 0
         for (let i = 1; i <= 3; i++) {
         var price = $('#price' + i).text();
         price = parseInt(price);
@@ -118,11 +124,85 @@ $(function() {
         var shipping = 10.00
         orderTotal = orderTotal + shipping
     }
-    $('#tax').text("$" + tax)
+    $('#tax').text("$" + tax.toFixed(2))
     $('#ship').text("$" + shipping.toFixed(2))
 
     $('#gTotal').text("$" + orderTotal.toFixed(2));
+   }
+
+    $('.qty').blur(function() {
+      calculateTotals();
     });
 
-    
+    $('#place').submit(function(event) {
+        calculateTotals();
+        valid = true;
+        if ($("#name").val() == "") {
+            $('#nameErr').text('Username is required');
+            valid = false;
+            } else {
+            
+            $('#nameErr').text('');
+        }
+
+        if (!$('#email').val().match(emailregex)) {
+            $('#emailErr').text('Email format user@domain.com');
+            valid = false;
+            } else {
+            $('#emailErr').text('');
+        }
+
+         if ($('#email').val() !== $('#email2').val()) {
+            $('#email2Err').text('Emails do not match');
+            valid = false;
+        }else {
+            $('#email2Err').text('')
+        }
+
+        if ($('#adress').val() == "") {
+        $('#addressErr').text('Address is required');
+        valid = false;
+        } else {
+        
+        $('#addressErr').text('');
+        }
+
+         if ($('#city').val() == "") {
+        $('#cityErr').text('City is required');
+        valid = false;
+        } else {
+        
+        $('#cityErr').text('');
+        }
+
+        if ($('#shipaddr').val() == "") {
+        $('#shipaddrErr').text('Address is required');
+        valid = false;
+        } else {
+        
+        $('#shipaddrErr').text('');
+        }
+
+        if ($('#shipcity').val() == "") {
+        $('#shipcityErr').text('City is required');
+        valid = false;
+        } else {
+        
+        $('#shipcityErr').text('');
+        }
+
+        var zipValue = $("#zip").val();
+        if ($('#zip').val() == "") {
+        $('#zipErr').text('Zip code is required');
+        } else if (isNaN(zipValue)) {
+        $('#zipErr').text('Zip code must be numbers');
+        } else if ($(this).val().length < 5 || $(this).val().length > 5) {
+        $('#zipErr').text('Zip code must be 5 characters');
+        valid = false;
+        } else {
+        $('#zipErr').text('');
+        }
+
+        return valid;
+    });
 });
