@@ -83,6 +83,37 @@ $(function() {
             $('#shipstate').val(state);
         }
     });
+    
+    var orderTotal = 0
 
+    for (let i = 1; i < 4; i++) {
+        var price = "#price" + i;
+        var quantity = ('#qty').val();
+        if (isNaN(quantity)) {
+            quantity = 0
+        };
+        var total = price * quantity;
+        total = total.toFixed(2);
+        orderTotal = orderTotal + total
+    }
 
+    $('#subt').val(orderTotal);
+
+    if ($('#shipstate').val("TX")) {
+        var tax = orderTotal * 0.08
+        orderTotal = orderTotal + tax
+    }
+
+    if ($('#shipstate').val("TX")) {
+        var shipping = 5.00
+        orderTotal = orderTotal + shipping
+    }else if ($('#shipstate').val("CA") || $('#shipstate').val("NY")) {
+        var shipping = 20.00
+        orderTotal = orderTotal + shipping
+    }else {
+        var shipping = 10.00
+        orderTotal = orderTotal + shipping
+    }
+
+    $('#gTotal').val(orderTotal);
 });
