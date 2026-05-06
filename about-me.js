@@ -1,14 +1,12 @@
 $(function() {
-    
+    today = 0
 
     function addition() {
-        var number1 = 1
-        var number2 = 2
-
-        return number1 + number2;
+        var number1 = Math.floor(Math.random * 1236);
+        var number2 = Math.floor(Math.random * 1236);
+        var today = number1 + number2
     };
 
-    var today= addition();
 
      document.getElementById("notd").innerHTML = 
     "The number of the day is " + today + "."
