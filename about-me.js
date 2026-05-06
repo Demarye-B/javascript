@@ -1,13 +1,14 @@
 $(function() {
-    
-var number1 = Math.floor(Math.random * 7);
-        var number2 = Math.floor(Math.random * 5);
-        var today = number1 + number2
+        var num1 = document.getElementById("1").innerHTML =
+Math.floor(Math.random() * 10);
+        var num2 = document.getElementById("2").innerHTML =
+Math.floor(Math.random() * 10);
+num1 = parseInt(num1);
+num2 = parseInt(num2);
+var today = num1 + num2
+
     function addition() {
-        var number1 = Math.floor(Math.random * 1236);
-        var number2 = Math.floor(Math.random * 1236);
-        var today = number1 + number2
-       return today;
+      
     };
 
      document.getElementById("notd").innerHTML = 
