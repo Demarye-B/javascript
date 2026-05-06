@@ -4,9 +4,8 @@ $(function() {
     function addition() {
         var number1 = Math.floor(Math.random * 1236);
         var number2 = Math.floor(Math.random * 1236);
-        var sum = number1 + number2;
 
-        return sum;
+        return number1 + number2;
     };
 
     var today= addition();
