@@ -7,6 +7,6 @@ $(function() {
     };
 
     $(document).ready(function() {
-        $('#notd').animate({right: '100px', opacity: '1'}, "slow", "swing");
+        $('#title').animate({right: '100px', opacity: '1'}, "slow", "swing");
     });
 });
