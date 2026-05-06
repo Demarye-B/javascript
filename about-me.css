@@ -1,4 +1,15 @@
+body {
+    background-color: dodgerblue;
+}
+
+#container {
+    background-color: rgba(255,255,255,0.5);
+    border: 10px solid white;
+    border-radius: 10px;
+}
+
 #title {
+    text-align: center;
 	position: relative;
 	right: -200px;
 	opacity: 0;
