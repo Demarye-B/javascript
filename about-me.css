@@ -3,3 +3,7 @@
 	right: -200px;
 	opacity: 0;
 }
+
+.fade {
+    position: relative;
+}

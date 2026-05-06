@@ -8,5 +8,6 @@ $(function() {
 
     $(document).ready(function() {
         $('#title').animate({right: '1px', opacity: '1'}, "slow", "swing");
+        $('.fade').fadeIn();
     });
 });
