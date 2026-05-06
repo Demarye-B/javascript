@@ -1,14 +1,16 @@
 $(function() {
-        var num1 = document.getElementById("1").innerHTML =
-Math.floor(Math.random() * 10);
-        var num2 = document.getElementById("2").innerHTML =
-Math.floor(Math.random() * 10);
+       
+
+    function addition() {
+       var num1 = document.getElementById("1").innerHTML = 1 +
+Math.floor(Math.random() * 145);
+        var num2 = document.getElementById("2").innerHTML = 1 +
+Math.floor(Math.random() * 16);
 num1 = parseInt(num1);
 num2 = parseInt(num2);
 var today = num1 + num2
 
-    function addition() {
-      
+return today;
     };
 
      document.getElementById("notd").innerHTML = 
