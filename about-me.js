@@ -9,7 +9,7 @@ $(function() {
         return sum;
     };
 
-    var math= addition();
+    var math= sum
 
      document.getElementById("notd").innerHTML = 
     "The number of the day is " + math + "."
