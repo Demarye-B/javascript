@@ -2,8 +2,8 @@ $(function() {
     
 
     function addition() {
-        var number1 = Math.floor(Math.random * 1236);
-        var number2 = Math.floor(Math.random * 1236);
+        var number1 = 1
+        var number2 = 2
 
         return number1 + number2;
     };
