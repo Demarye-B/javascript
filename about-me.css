@@ -6,4 +6,5 @@
 
 .fade {
     position: relative;
+    display: none;
 }
