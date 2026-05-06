@@ -1,5 +1,5 @@
 $(function() {
-    var today = 0
+    var today = int
 
     function addition() {
         var number1 = Math.floor(Math.random * 1236);
