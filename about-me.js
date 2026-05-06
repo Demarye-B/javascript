@@ -7,7 +7,7 @@ $(function() {
 return num1 + num2
 
     };
-
+ today = addition();
      document.getElementById("notd").innerHTML = 
     "The number of the day is " + today + "."
 
