@@ -1,7 +1,7 @@
 $(function() {
     
-var number1 = Math.floor(Math.random * 1236);
-        var number2 = Math.floor(Math.random * 1236);
+var number1 = Math.floor(Math.random * 7);
+        var number2 = Math.floor(Math.random * 5);
         var today = number1 + number2
     function addition() {
         var number1 = Math.floor(Math.random * 1236);
